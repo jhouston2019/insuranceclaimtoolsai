@@ -1,0 +1,17 @@
+# Placeholder files
+**/favicon-placeholder.txt
+**/og-image-placeholder.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+

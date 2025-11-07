@@ -1,0 +1,181 @@
+/* Custom CSS Variables */
+:root {
+  --navy: #0a1a2f;
+  --emerald: #00c896;
+  --gray: #f8f9fa;
+  --accent: #14b8a6;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--navy);
+  line-height: 1.6;
+  padding-bottom: 80px; /* Space for sticky footer CTA */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--emerald) 0%, var(--accent) 100%);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 200, 150, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--navy);
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--emerald);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+  background: var(--emerald);
+  color: white;
+}
+
+/* Card Hover Effects */
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Sticky Value Banner */
+.sticky-banner {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2f4f 100%);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Footer CTA */
+.sticky-footer-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2f4f 100%);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Gradient Background */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--emerald) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+/* FAQ Accordion */
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 1.5rem 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--emerald);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 0 1.5rem 0;
+  color: #6b7280;
+}
+
+.faq-answer.active {
+  max-height: 500px;
+}
+
+/* Fade Transitions */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sticky-footer-cta {
+    font-size: 0.875rem;
+    padding: 0.75rem 0;
+  }
+}
+
